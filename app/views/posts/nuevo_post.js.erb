@@ -1,0 +1,9 @@
+var html = "<tr>\
+  <td><%= j @post.title %></td>\
+  <td><%= j @post.content %></td>\
+  <td><%= j link_to 'Show', @post %></td>\
+  <td><%= j link_to 'Edit', edit_post_path(@post) %></td>\
+  <td><%= j link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %></td>\
+</tr>";
+
+$("tbody").append(html);
